@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AAM Vendor Application Flyer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Permanent+Marker&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --ink: #11100d;
+        --cream: #fff1c7;
+        --red: #c94328;
+        --orange: #e26032;
+        --gold: #f0bd4f;
+        --green: #6da15d;
+        --deep-green: #075c32;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        margin: 0;
+        background: #d9d2c5;
+        color: var(--ink);
+      }
+
+      .flyer {
+        position: relative;
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        background: var(--gold);
+        border: 16px solid var(--ink);
+        box-shadow: 0 30px 70px rgba(17, 16, 13, 0.35);
+        font-family: "Permanent Marker", "Arial Black", sans-serif;
+        isolation: isolate;
+      }
+
+      .flyer::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(139deg, var(--orange) 0 48%, transparent 48.2%),
+          repeating-linear-gradient(0deg, rgba(17, 16, 13, 0.05) 0 1px, transparent 1px 7px);
+        z-index: -2;
+      }
+
+      .flyer::after {
+        content: "";
+        position: absolute;
+        inset: 22px;
+        border: 4px solid rgba(17, 16, 13, 0.65);
+        pointer-events: none;
+        transform: rotate(-0.35deg);
+      }
+
+      .paper-fold {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: rgba(17, 16, 13, 0.34);
+        box-shadow: 0 5px 0 rgba(255, 248, 234, 0.25);
+      }
+
+      .top-label {
+        position: absolute;
+        top: 44px;
+        left: 64px;
+        right: 64px;
+        display: flex;
+        justify-content: space-between;
+        color: var(--ink);
+        font-size: 38px;
+        letter-spacing: 0;
+        transform: rotate(-2deg);
+      }
+
+      .logo {
+        position: absolute;
+        top: 102px;
+        left: 64px;
+        width: 166px;
+        filter: drop-shadow(5px 5px 0 rgba(17, 16, 13, 0.2));
+      }
+
+      .headline {
+        position: absolute;
+        top: 116px;
+        left: 235px;
+        right: 55px;
+        margin: 0;
+        font-family: "Archivo Black", Impact, sans-serif;
+        font-size: 118px;
+        line-height: 0.84;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        transform: rotate(1.3deg);
+      }
+
+      .headline span {
+        display: block;
+      }
+
+      .headline .wanted {
+        color: var(--deep-green);
+        text-shadow: 5px 5px 0 var(--cream), 10px 10px 0 var(--ink);
+      }
+
+      .subhead {
+        position: absolute;
+        top: 326px;
+        left: 74px;
+        width: 900px;
+        margin: 0;
+        padding: 16px 24px 12px;
+        border: 7px solid var(--ink);
+        background: var(--cream);
+        font-size: 44px;
+        line-height: 1.02;
+        text-align: center;
+        transform: rotate(-1deg);
+      }
+
+      .center-shape {
+        position: absolute;
+        top: 445px;
+        left: 305px;
+        width: 470px;
+        height: 420px;
+        background: var(--green);
+        border: 9px solid var(--ink);
+        clip-path: polygon(7% 19%, 20% 5%, 44% 0, 60% 12%, 79% 7%, 94% 24%, 86% 48%, 98% 69%, 78% 89%, 53% 82%, 35% 100%, 19% 83%, 3% 72%, 13% 52%, 0 35%);
+        transform: rotate(-4deg);
+      }
+
+      .center-shape::before {
+        content: "";
+        position: absolute;
+        inset: 50px 88px 120px;
+        border: 8px solid var(--ink);
+        border-bottom: 0;
+        transform: perspective(300px) rotateX(18deg);
+      }
+
+      .center-shape::after {
+        content: "AAM";
+        position: absolute;
+        left: 115px;
+        bottom: 64px;
+        font-family: "Archivo Black", Impact, sans-serif;
+        font-size: 92px;
+        color: var(--ink);
+      }
+
+      .tent-left,
+      .tent-right {
+        position: absolute;
+        top: 585px;
+        width: 250px;
+        height: 145px;
+        border: 7px solid var(--ink);
+        background: var(--cream);
+      }
+
+      .tent-left {
+        left: 62px;
+        transform: rotate(-3deg);
+      }
+
+      .tent-right {
+        right: 58px;
+        transform: rotate(3deg);
+      }
+
+      .tent-left::before,
+      .tent-right::before {
+        content: "";
+        position: absolute;
+        top: -68px;
+        left: -7px;
+        width: calc(100% + 14px);
+        height: 72px;
+        background: var(--red);
+        border: 7px solid var(--ink);
+        clip-path: polygon(50% 0, 100% 100%, 0 100%);
+      }
+
+      .tent-right::before {
+        background: var(--deep-green);
+      }
+
+      .tent-left span,
+      .tent-right span {
+        display: block;
+        padding: 28px 16px;
+        font-size: 36px;
+        line-height: 0.98;
+        text-align: center;
+      }
+
+      .callouts {
+        position: absolute;
+        top: 760px;
+        left: 70px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        width: 620px;
+      }
+
+      .callout {
+        min-height: 88px;
+        padding: 14px 18px 10px;
+        border: 6px solid var(--ink);
+        background: var(--cream);
+        font-size: 25px;
+        line-height: 1;
+        transform: rotate(-1deg);
+      }
+
+      .callout:nth-child(2),
+      .callout:nth-child(3) {
+        transform: rotate(1.1deg);
+      }
+
+      .market-info {
+        position: absolute;
+        left: 72px;
+        top: 982px;
+        width: 570px;
+        font-size: 44px;
+        line-height: 0.98;
+        text-transform: uppercase;
+        transform: rotate(-1deg);
+      }
+
+      .market-info strong {
+        display: block;
+        color: var(--deep-green);
+        font-family: "Archivo Black", Impact, sans-serif;
+        font-size: 60px;
+        letter-spacing: 0;
+      }
+
+      .qr-card {
+        position: absolute;
+        right: 62px;
+        top: 852px;
+        width: 282px;
+        padding: 16px;
+        border: 7px solid var(--ink);
+        background: var(--cream);
+        text-align: center;
+        transform: rotate(2deg);
+      }
+
+      .qr-card img {
+        display: block;
+        width: 100%;
+        border: 4px solid var(--ink);
+      }
+
+      .qr-card p {
+        margin: 12px 0 0;
+        font-size: 31px;
+        line-height: 0.95;
+      }
+
+      .footer {
+        position: absolute;
+        left: 58px;
+        right: 58px;
+        bottom: 50px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 24px;
+        align-items: end;
+      }
+
+      .footer .cta {
+        margin: 0;
+        font-family: "Archivo Black", Impact, sans-serif;
+        font-size: 48px;
+        line-height: 0.9;
+        text-transform: uppercase;
+      }
+
+      .footer .link {
+        max-width: 360px;
+        margin: 0;
+        font-family: "Special Elite", monospace;
+        font-size: 20px;
+        line-height: 1.05;
+        overflow-wrap: anywhere;
+      }
+
+      .seal {
+        position: absolute;
+        left: 64px;
+        bottom: 170px;
+        width: 126px;
+        height: 126px;
+        display: none;
+        place-items: center;
+        border: 5px solid var(--ink);
+        border-radius: 50%;
+        background: transparent;
+        font-size: 22px;
+        line-height: 0.9;
+        text-align: center;
+        transform: rotate(-9deg);
+      }
+
+      .scribble {
+        position: absolute;
+        width: 118px;
+        height: 32px;
+        border-top: 8px solid var(--ink);
+        border-radius: 50%;
+        opacity: 0.8;
+      }
+
+      .scribble.one {
+        top: 420px;
+        left: 92px;
+        transform: rotate(12deg);
+      }
+
+      .scribble.two {
+        top: 418px;
+        right: 90px;
+        transform: rotate(-16deg);
+      }
+    </style>
+  </head>
+  <body>
+    <article class="flyer" aria-label="African American Market vendor application flyer">
+      <div class="paper-fold"></div>
+      <div class="top-label">
+        <span>BLACK-OWNED</span>
+        <span>COMMUNITY MARKET</span>
+      </div>
+      <img class="logo" src="../logos/aa-market-logo.png" alt="African American Market logo">
+
+      <h1 class="headline">
+        <span>VENDORS</span>
+        <span class="wanted">WANTED</span>
+      </h1>
+
+      <p class="subhead">APPLY TO VEND AT THE AFRICAN AMERICAN MARKET</p>
+
+      <div class="scribble one"></div>
+      <div class="scribble two"></div>
+      <div class="center-shape"></div>
+
+      <div class="tent-left"><span>FOOD<br>GOODS<br>SERVICES</span></div>
+      <div class="tent-right"><span>ART<br>STYLE<br>CULTURE</span></div>
+
+      <section class="callouts" aria-label="Vendor benefits">
+        <div class="callout">LOCAL CUSTOMERS</div>
+        <div class="callout">WEEKLY VISIBILITY</div>
+        <div class="callout">BLACK BUSINESS SUPPORT</div>
+        <div class="callout">COMMUNITY EXPOSURE</div>
+      </section>
+
+      <div class="seal">FDR PARK<br>PHILLY</div>
+
+      <div class="market-info">
+        EVERY SATURDAY
+        <strong>10AM - 5PM</strong>
+        FDR PARK
+      </div>
+
+      <div class="qr-card">
+        <img src="../assets/vendor-application-qr.png" alt="QR code for vendor application">
+        <p>SCAN TO APPLY</p>
+      </div>
+
+      <footer class="footer">
+        <p class="cta">PULL UP.<br>SET UP.<br>SELL OUT.</p>
+        <p class="link">docs.google.com/forms<br>African American Market Vendor Application</p>
+      </footer>
+    </article>
+  </body>
+</html>
