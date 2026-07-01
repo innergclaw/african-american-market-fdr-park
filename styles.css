@@ -567,6 +567,36 @@ p {
   margin-top: 0.75rem;
 }
 
+.signup-section {
+  padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 5vw, 5rem);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(7, 92, 50, 0.12)),
+    var(--cream);
+}
+
+.signup-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.signup-card {
+  min-height: 300px;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  border: 3px solid var(--ink);
+  border-radius: 8px;
+  background: #fffdf7;
+  box-shadow: 9px 9px 0 var(--ink);
+}
+
+.signup-card:nth-child(1) {
+  background: var(--gold);
+}
+
+.signup-card .button {
+  margin-top: 1rem;
+}
+
 .spotlight-list h3,
 .spotlight-list p {
   padding: 0 1.2rem;
@@ -765,6 +795,7 @@ p {
   .hero,
   .split,
   .application-section,
+  .signup-grid,
   .proposal-hero,
   .proposal-grid,
   .support-list,
