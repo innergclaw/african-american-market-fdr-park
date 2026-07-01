@@ -731,6 +731,107 @@ p {
   font-weight: 900;
 }
 
+.jump-comb {
+  position: fixed;
+  right: clamp(0.8rem, 3vw, 1.5rem);
+  bottom: clamp(0.8rem, 3vw, 1.5rem);
+  z-index: 30;
+  display: flex;
+  width: 74px;
+  height: 128px;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(18px) rotate(2deg) scale(0.94);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease,
+    filter 220ms ease;
+  filter: drop-shadow(0 16px 18px rgba(17, 16, 13, 0.28));
+}
+
+.jump-comb.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) rotate(2deg) scale(1);
+  animation: combFloat 3.4s ease-in-out infinite;
+}
+
+.jump-comb:hover {
+  filter: drop-shadow(0 18px 18px rgba(17, 16, 13, 0.34));
+}
+
+.jump-comb:focus-visible {
+  outline: 4px solid var(--gold);
+  outline-offset: 8px;
+}
+
+.comb-afro {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.comb-afro::before {
+  position: absolute;
+  z-index: -1;
+  top: -8px;
+  left: 22px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--ink);
+  box-shadow:
+    14px 1px 0 var(--ink),
+    26px 11px 0 var(--ink),
+    29px 27px 0 var(--ink),
+    20px 43px 0 var(--ink),
+    4px 51px 0 var(--ink),
+    -13px 49px 0 var(--ink),
+    -28px 38px 0 var(--ink),
+    -34px 20px 0 var(--ink),
+    -27px 4px 0 var(--ink),
+    -11px -5px 0 var(--ink);
+}
+
+.comb-arrow {
+  position: relative;
+  z-index: 1;
+  color: var(--gold);
+  font-family: "Archivo Black", "Inter", sans-serif;
+  font-size: 1.75rem;
+  line-height: 1;
+  transform: translateY(1px);
+}
+
+.comb-spine {
+  width: 62px;
+  height: 30px;
+  margin-top: -4px;
+  border-radius: 18px 18px 7px 7px;
+  background: var(--ink);
+}
+
+.comb-teeth {
+  display: grid;
+  width: 62px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+}
+
+.comb-teeth span {
+  height: 48px;
+  border-radius: 0 0 8px 8px;
+  background: var(--ink);
+}
+
 .project-page {
   background:
     radial-gradient(circle at top right, rgba(246, 179, 39, 0.22), transparent 30rem),
@@ -869,6 +970,16 @@ p {
   }
   50% {
     transform: translateY(-14px) rotate(1deg);
+  }
+}
+
+@keyframes combFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(2deg) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-1deg) scale(1.02);
   }
 }
 

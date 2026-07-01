@@ -4,6 +4,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelectorAll(".nav-links a");
 const eventType = document.querySelector("#event-type");
 const waterWaiver = document.querySelector("#water-waiver");
+const jumpComb = document.querySelector(".jump-comb");
 
 if (siteHeader && menuToggle) {
   menuToggle.addEventListener("click", () => {
@@ -28,6 +29,16 @@ if (eventType && waterWaiver) {
 
   eventType.addEventListener("change", syncWaiverRequirement);
   syncWaiverRequirement();
+}
+
+if (jumpComb) {
+  const syncJumpComb = () => {
+    jumpComb.classList.toggle("is-visible", window.scrollY > 420);
+  };
+
+  window.addEventListener("scroll", syncJumpComb, { passive: true });
+  window.addEventListener("load", syncJumpComb);
+  syncJumpComb();
 }
 
 const observer = new IntersectionObserver(
