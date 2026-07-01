@@ -410,6 +410,102 @@ p {
   text-underline-offset: 5px;
 }
 
+.event-form-section {
+  padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 5vw, 5rem);
+  background:
+    radial-gradient(circle at bottom right, rgba(201, 54, 36, 0.16), transparent 28rem),
+    var(--paper);
+}
+
+.event-form {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 3px solid var(--ink);
+  border-radius: 8px;
+  background: #fffdf7;
+  box-shadow: 10px 10px 0 var(--ink);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.event-form label,
+.event-form legend {
+  font-weight: 900;
+}
+
+.event-form label span {
+  color: var(--red);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.event-form input,
+.event-form select {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 0.45rem;
+  padding: 0.78rem 0.85rem;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+}
+
+.event-form fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.25rem;
+  margin: 1.25rem 0 0;
+  padding: 1rem;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+}
+
+.event-form legend {
+  padding: 0 0.45rem;
+}
+
+.choice,
+.checkbox-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+.choice input,
+.checkbox-line input {
+  width: auto;
+  min-height: auto;
+  margin-top: 0.22rem;
+}
+
+.checkbox-line {
+  margin-top: 1rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.required-check {
+  padding: 1rem;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: rgba(17, 16, 13, 0.04);
+}
+
+.required-check.is-required {
+  border-color: var(--red);
+  background: rgba(201, 54, 36, 0.08);
+}
+
+.event-form button {
+  margin-top: 1.25rem;
+}
+
 .calendar-section {
   padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 5vw, 5rem);
   background:
@@ -810,6 +906,7 @@ p {
 
   .quick-info,
   .card-grid,
+  .form-grid,
   .photo-grid,
   .spotlight-list {
     grid-template-columns: 1fr;

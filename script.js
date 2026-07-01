@@ -2,6 +2,8 @@ const animatedElements = document.querySelectorAll("[data-animate]");
 const siteHeader = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelectorAll(".nav-links a");
+const eventType = document.querySelector("#event-type");
+const waterWaiver = document.querySelector("#water-waiver");
 
 if (siteHeader && menuToggle) {
   menuToggle.addEventListener("click", () => {
@@ -15,6 +17,17 @@ if (siteHeader && menuToggle) {
       menuToggle.setAttribute("aria-expanded", "false");
     });
   });
+}
+
+if (eventType && waterWaiver) {
+  const syncWaiverRequirement = () => {
+    const requiresWaiver = eventType.value === "Water Fight";
+    waterWaiver.required = requiresWaiver;
+    waterWaiver.closest(".required-check")?.classList.toggle("is-required", requiresWaiver);
+  };
+
+  eventType.addEventListener("change", syncWaiverRequirement);
+  syncWaiverRequirement();
 }
 
 const observer = new IntersectionObserver(

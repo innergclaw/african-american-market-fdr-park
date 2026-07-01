@@ -32,6 +32,7 @@
       </button>
       <nav class="nav-links" id="main-navigation" aria-label="Main navigation">
         <a href="#events">Events</a>
+        <a href="#event-signup">Event Sign Up</a>
         <a href="#experience">Experience</a>
         <a href="#calendar">July Calendar</a>
         <a href="#vendors">Vendors</a>
@@ -117,7 +118,7 @@
             <p class="card-label">Yoga Sign Up</p>
             <h3>Upcoming Yoga Dates</h3>
             <p>Sign up for yoga on July 11, July 18, Aug 15, Sept 19, and Oct 17.</p>
-            <a href="https://www.instagram.com/aamarket_fdrpark/" target="_blank" rel="noopener">Message AAM for details</a>
+            <a href="#event-signup">Register for yoga</a>
           </article>
           <article class="feature-card event-card" data-animate>
             <p class="card-label">Every Saturday</p>
@@ -126,6 +127,107 @@
             <a href="#calendar">View calendar</a>
           </article>
         </div>
+      </section>
+
+      <section class="event-form-section" id="event-signup">
+        <div class="section-heading" data-animate>
+          <p class="eyebrow">Event Sign Up</p>
+          <h2>Register for African American Market activities.</h2>
+          <p>
+            Sign up for yoga, water fights, cooking demonstrations, kids activities,
+            wellness workshops, and future market programming.
+          </p>
+        </div>
+        <form class="event-form" action="https://formspree.io/f/xykqnbdq" method="POST" data-animate>
+          <div class="form-grid">
+            <label>
+              Full Name <span>Required</span>
+              <input type="text" name="full_name" autocomplete="name" required>
+            </label>
+            <label>
+              Email Address <span>Required</span>
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>
+              Phone Number <span>Required</span>
+              <input type="tel" name="phone" autocomplete="tel" required>
+            </label>
+            <label>
+              Which event are you registering for?
+              <select name="event" id="event-type" required>
+                <option value="">Select an event</option>
+                <option>Yoga</option>
+                <option>Water Fight</option>
+                <option>Cooking Demonstration</option>
+                <option>Kids Activity</option>
+                <option>Wellness Workshop</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              Which date are you attending? <span>Required</span>
+              <input type="date" name="event_date" required>
+            </label>
+            <label>
+              Number of attendees <span>Required</span>
+              <input type="number" name="attendees" min="1" required>
+            </label>
+            <label>
+              Ages of participants
+              <input type="text" name="participant_ages" placeholder="Especially if registering children">
+            </label>
+            <label>
+              Emergency Contact
+              <input type="text" name="emergency_contact" placeholder="For yoga, water fight, or physical activities">
+            </label>
+            <label>
+              How did you hear about this event?
+              <select name="referral_source">
+                <option value="">Select one</option>
+                <option>Instagram</option>
+                <option>Facebook</option>
+                <option>Friend</option>
+                <option>At the Market</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              Zip Code
+              <input type="text" name="zip_code" inputmode="numeric" autocomplete="postal-code">
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Would you like to receive updates about future African American Market events?</legend>
+            <label class="choice"><input type="radio" name="future_updates" value="Yes"> Yes</label>
+            <label class="choice"><input type="radio" name="future_updates" value="No"> No</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>First time attending the African American Market?</legend>
+            <label class="choice"><input type="radio" name="first_time_attending" value="Yes"> Yes</label>
+            <label class="choice"><input type="radio" name="first_time_attending" value="No"> No</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Interested in becoming a vendor?</legend>
+            <label class="choice"><input type="radio" name="interested_vendor" value="Yes"> Yes</label>
+            <label class="choice"><input type="radio" name="interested_vendor" value="No"> No</label>
+          </fieldset>
+
+          <label class="checkbox-line">
+            <input type="checkbox" name="mailing_list_signup" value="Yes">
+            Sign me up for the African American Market mailing list.
+          </label>
+
+          <label class="checkbox-line required-check">
+            <input type="checkbox" name="water_activity_waiver" value="Accepted" id="water-waiver">
+            I understand this activity may involve water play or physical activity. I participate voluntarily and assume responsibility for myself and any minors I register.
+          </label>
+
+          <input type="hidden" name="_subject" value="New African American Market Event Registration">
+          <button class="button primary" type="submit">Submit Event Registration</button>
+        </form>
       </section>
 
       <section class="calendar-section" id="calendar">
