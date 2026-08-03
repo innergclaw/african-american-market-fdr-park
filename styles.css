@@ -390,6 +390,25 @@ p {
   padding: 1.35rem;
 }
 
+.event-feature {
+  gap: 1rem;
+  padding: 0;
+  overflow: hidden;
+  background: #fffdf7;
+}
+
+.event-feature img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-bottom: 2px solid var(--ink);
+}
+
+.event-feature div {
+  padding: 0 1.35rem 1.35rem;
+}
+
 .event-card:nth-child(1) {
   background: #fffdf7;
 }
@@ -400,6 +419,10 @@ p {
 
 .event-card:nth-child(3) {
   background: #dce9c8;
+}
+
+.event-card:nth-child(4) {
+  background: #fffdf7;
 }
 
 .feature-card a {
