@@ -3,7 +3,7 @@
 Monthly service begins: August 8, 2026
 
 Content Drive:
-https://drive.google.com/drive/u/3/folders/17PssseD1bccfyy0AovRSmDfi7boTOdIv
+https://drive.google.com/drive/folders/17PssseD1bccfyy0AovRSmDfi7boTOdIv?usp=sharing
 
 Posting cadence:
 - Morning post: 9:00 AM
@@ -43,7 +43,8 @@ Known August priorities:
 
 Drive asset tracking:
 Use the CSV file `fdr-august-instagram-schedule.csv` to connect each post to the exact Drive file, caption draft, and final status.
-Access note: the Drive folder currently requires Google sign-in from this environment, so assets need to be matched manually from the folder or shared as public/attached files.
+Asset inventory:
+Use `fdr-drive-asset-inventory.md` for the current visible file list from the shared Drive.
 
 ## First Scheduling Push
 
